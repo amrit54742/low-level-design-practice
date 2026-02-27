@@ -1,0 +1,10 @@
+templatemethodpattern
+│
+├── base
+│     └── ModelTrainer.java
+│
+├── concrete
+│     ├── NeuralNetworkTrainer.java
+│     └── DecisionTreeTrainer.java
+│
+└── TemplateMethodPattern.java

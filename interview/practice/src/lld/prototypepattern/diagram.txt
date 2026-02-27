@@ -1,0 +1,7 @@
+prototypepattern
+│
+├── prototype
+│     ├── Cloneable.java
+│     └── NPC.java
+│
+└── PrototypePattern.java

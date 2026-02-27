@@ -1,0 +1,13 @@
+decoratorpattern
+│
+├── component
+│     ├── Character.java
+│     ├── Mario.java
+│
+├── decorator
+│     ├── CharacterDecorator.java
+│     ├── HeightUp.java
+│     ├── GunPowerUp.java
+│     ├── StarPowerUp.java
+│
+└── DecoratorPattern.java

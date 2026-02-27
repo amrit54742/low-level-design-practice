@@ -1,0 +1,12 @@
+compositepattern
+│
+├── component
+│     ├── FileSystemItem.java
+│
+├── leaf
+│     ├── File.java
+│
+├── composite
+│     ├── Folder.java
+│
+└── CompositePattern.java

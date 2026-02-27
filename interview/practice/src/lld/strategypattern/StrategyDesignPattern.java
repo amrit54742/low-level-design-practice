@@ -15,7 +15,7 @@ public class StrategyDesignPattern {
     public static void main(String[] args) {
 
         Robot robot1 = new CompanionRobot(
-                new NormalWalk(),
+                new NoWalk(),
                 new NormalTalk(),
                 new NoFly()
         );

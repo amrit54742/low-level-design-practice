@@ -1,7 +1,11 @@
 package lld.vendingmachine.model;
 
 import lld.vendingmachine.state.*;
+import lombok.Getter;
+import lombok.Setter;
 
+@Getter
+@Setter
 public class VendingMachine {
 
     private VendingState currentState;

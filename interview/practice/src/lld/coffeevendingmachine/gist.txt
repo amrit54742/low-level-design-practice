@@ -1,0 +1,9 @@
+✅ Simple but extensible
+
+✅ Using Strategy Pattern (for coffee types)
+
+✅ Using State Pattern (for machine states)
+
+✅ Proper package structure
+
+✅ Easy to understand flow

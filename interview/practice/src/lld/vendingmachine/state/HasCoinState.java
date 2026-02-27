@@ -5,15 +5,19 @@ import lld.vendingmachine.model.VendingMachine;
 public class HasCoinState implements VendingState {
 
     public VendingState insertCoin(VendingMachine machine, int coin) {
+        System.out.println("(inside hascoinstate)Coin inserted and amount is " + coin );
         machine.addAmount(coin);
+        System.out.println("(inside hascoinstate)total amount is " + machine.getInsertedAmount() );
         return this;
     }
 
     public VendingState selectItem(VendingMachine machine) {
 
         if (machine.getInsertedAmount() >= machine.getItemPrice()) {
+            System.out.println("(inside hascoinstate)the total amount before dispensing is " + machine.getInsertedAmount() );
 
             int change = machine.getInsertedAmount() - machine.getItemPrice();
+            System.out.println("(inside hascoinstate) change value is " + change);
             if (change > 0) {
                 System.out.println("Change returned: Rs " + change);
             }

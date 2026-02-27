@@ -10,7 +10,7 @@ public class VendingMachineApplication {
 
         machine.printStatus();
 
-        machine.insertCoin(10);
+        machine.insertCoin(101);
         machine.insertCoin(10);
         machine.selectItem();
         machine.dispense();

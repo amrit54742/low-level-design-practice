@@ -6,7 +6,7 @@ public class NoCoinState implements VendingState {
 
     public VendingState insertCoin(VendingMachine machine, int coin) {
         machine.addAmount(coin);
-        System.out.println("Coin inserted.");
+        System.out.println("Coin inserted and amount is " + coin );
         return machine.getHasCoinState();
     }
 
