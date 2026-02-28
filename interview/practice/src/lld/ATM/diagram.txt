@@ -1,0 +1,16 @@
+com.atm
+│
+├── model
+│   ├── BankAccount.java
+│   └── Card.java
+│
+├── state
+│   ├── ATMState.java
+│   ├── IdleState.java
+│   ├── HasCardState.java
+│   └── AuthenticatedState.java
+│
+├── machine
+│   └── ATM.java
+│
+└── ATMMain.java
