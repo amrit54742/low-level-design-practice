@@ -1,0 +1,43 @@
+1. we need to write the filepath only in filelogger, so we wont need filepath variable in Logger.class,
+hence we will put this var in concrete class(file logger).
+
+2.Why Is This Needed(level.ordinal() < currentLevel.ordinal())?
+
+  Without this condition:
+
+  If you set:
+  logger.setLogLevel(INFO);
+  You would still log DEBUG logs.
+  That defeats the purpose of log levels.
+
+  🧠 Real-World Meaning
+
+  In production:
+    DEBUG → too noisy
+  INFO → normal logs
+  ERROR → important failures
+  When running in production, you usually set:
+  LogLevel.INFO
+  So DEBUG logs are suppressed.
+
+
+3. If interviewer asks:
+   Why do we compare ordinal values?
+
+   Answer:
+   We use ordinal comparison to filter logs based on severity. Only logs with severity greater than or equal to the configured log level are processed.
+   This prevents unnecessary logging in production environments.
+
+4. If interviewer asks:
+   Why not just one LoggerInterface reference?
+
+   You answer:
+   A single interface reference would restrict logging to one destination at a time.
+   Real logging frameworks support multiple simultaneous appenders, so we use a collection of strategies to support extensibility and multiple outputs.
+
+   Why not use(private LoggerInterface loggerInterface;-- in logger file) instead of list of types of appenders ??
+   Answer: Using a single interface reference would allow only one logging strategy at a time.
+   However, logging frameworks typically support multiple simultaneous outputs.
+   Therefore, using a collection of LogAppender strategies provides better extensibility and aligns with real-world logging frameworks.
+
+5.
