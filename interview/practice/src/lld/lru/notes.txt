@@ -1,0 +1,15 @@
+If interviewer asks:
+
+How did you achieve O(1)?
+
+Answer:
+
+By combining a HashMap for constant-time lookup and a Doubly Linked List for constant-time insertion and deletion.
+
+If asked:
+
+Why dummy head and tail?
+
+Answer:
+
+To avoid null checks and simplify edge cases while adding/removing nodes.

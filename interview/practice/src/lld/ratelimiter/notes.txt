@@ -1,0 +1,19 @@
+1. Why make Bucket static inner class?
+
+   Answer:
+   Bucket is an internal data structure that does not require access to the outer TokenBucketRateLimiter instance.
+   Making it static prevents each bucket from holding an unnecessary reference to the outer class, reducing memory overhead and improving encapsulation.
+
+2. “Won’t synchronized cause blocking?”
+
+   You answer:
+   Yes, but the lock is applied at the bucket level, meaning requests for different users operate on different bucket objects and therefore do not block each other.
+   This provides fine-grained locking and allows the system to scale across multiple users.
+
+3. Why is the instance variable static in Singleton?
+
+   Answer:
+   The instance variable must be static because it needs to belong to the class rather than individual objects.
+   This ensures that all calls to getInstance() share the same reference and only one instance of the class is created for the entire application.
+
+4.
