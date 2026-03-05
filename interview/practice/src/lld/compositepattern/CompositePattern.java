@@ -29,14 +29,14 @@ public class CompositePattern {
 
 //        root.openAll(0);
 
-        FileSystemItem cwd = root.cd("docs");
+//        FileSystemItem cwd = root.cd("docs");
+//
+//        if (cwd != null) {
+//            cwd.ls(0);
+//        } else {
+//            System.out.println("\nCould not cd into docs\n");
+//        }
 
-        if (cwd != null) {
-            cwd.ls(0);
-        } else {
-            System.out.println("\nCould not cd into docs\n");
-        }
-
-//        System.out.println(root.getSize());
+        System.out.println(root.getSize());
     }
 }

@@ -1,0 +1,15 @@
+facadepattern
+│
+├── subsystem
+│     ├── PowerSupply.java
+│     ├── CoolingSystem.java
+│     ├── CPU.java
+│     ├── Memory.java
+│     ├── HardDrive.java
+│     ├── BIOS.java
+│     └── OperatingSystem.java
+│
+├── facade
+│     └── ComputerFacade.java
+│
+└── FacadePattern.java
