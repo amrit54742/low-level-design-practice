@@ -1,0 +1,37 @@
+Step 1 — Topic creation
+service.createTopic("orders")
+
+Creates:
+Topic -> orders
+
+
+Step 2 — Subscribers subscribe
+service.subscribe("orders", sub1)
+service.subscribe("orders", sub2)
+
+Topic now has:
+subscribers = [sub1, sub2]
+
+
+Step 3 — Publisher publishes message
+publisher.publish("orders", message)
+
+
+Step 4 — PubSubService receives request
+publish(topicName, message)
+
+
+Step 5 — Topic publishes message
+topic.publish(message)
+
+
+Step 6 — Notify subscribers
+subscriber.consume(message)
+
+Output:
+AnalyticsService received message: Order Created
+NotificationService received message: Order Created
+
+
+
+When we publish things then a specific topic is published and all of its subscribers get the message.
