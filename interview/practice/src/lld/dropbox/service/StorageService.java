@@ -1,6 +1,7 @@
 package lld.dropbox.service;
 
 import lld.dropbox.model.File;
+import lld.dropbox.model.Folder;
 import lld.dropbox.strategy.StorageStrategy;
 
 public class StorageService {
@@ -26,6 +27,14 @@ public class StorageService {
 
     public File retrieveFile(String fileName){
         return storageStrategy.retreiveFile(fileName);
+    }
+
+    public void addFolder(Folder folder){
+        storageStrategy.storeFolder(folder);
+    }
+
+    public Folder retrieveFolder(String folderName){
+        return storageStrategy.retrieveFolder(folderName);
     }
 
 

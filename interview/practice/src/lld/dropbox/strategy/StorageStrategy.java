@@ -9,9 +9,9 @@ public interface StorageStrategy {
 
     File retreiveFile(String fileName);
 
-//    void storeFolder(Folder folder);
-//
-//    Folder retrieveFolder(String folderName);
+    void storeFolder(Folder folder);
+
+    Folder retrieveFolder(String folderName);
 
     //todo: add methods for storing and retrieving folder.--
 
