@@ -10,7 +10,7 @@ import java.util.List;
 @Getter
 @Setter
 @NoArgsConstructor
-public class Folder implements StorageSystem{
+public class Folder implements StorageType {
     private String name;
     private List<File> fileList= new ArrayList<>();
     private List<Folder> folderList= new ArrayList<>();

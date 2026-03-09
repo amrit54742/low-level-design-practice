@@ -1,0 +1,28 @@
+splitwise
+│
+├── model
+│     ├── SplitType.java
+│     ├── Split.java
+│     ├── Expense.java
+│     └── User.java
+│
+├── observer
+│     └── Observer.java
+│
+├── strategy
+│     ├── SplitStrategy.java
+│     ├── EqualSplit.java
+│     ├── ExactSplit.java
+│     └── PercentageSplit.java
+│
+├── factory
+│     └── SplitFactory.java
+│
+├── service
+│     ├── DebtSimplifier.java
+│     └── Splitwise.java
+│
+├── group
+│     └── Group.java
+│
+└── SplitwiseApp.java

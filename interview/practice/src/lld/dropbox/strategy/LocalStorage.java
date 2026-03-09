@@ -2,14 +2,14 @@ package lld.dropbox.strategy;
 
 import lld.dropbox.model.File;
 import lld.dropbox.model.Folder;
-import lld.dropbox.model.StorageSystem;
+import lld.dropbox.model.StorageType;
 
 import java.util.HashMap;
 import java.util.Map;
 
 public class LocalStorage implements StorageStrategy{
 
-    private Map<String, StorageSystem> fileStorage= new HashMap<>();
+    private Map<String, StorageType> fileStorage= new HashMap<>();
 
     @Override
     public void storeFile(File file) {

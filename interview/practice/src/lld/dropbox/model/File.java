@@ -7,7 +7,7 @@ import lombok.Setter;
 @Getter
 @Setter
 @NoArgsConstructor
-public class File implements StorageSystem{
+public class File implements StorageType {
     private int fileId;
     private String name;
     private String content;
