@@ -1,0 +1,2 @@
+1. we can check whether the seats which are to be booked exists in the seats that is under the show class, and then only we should proceed to lock them... ????
+
