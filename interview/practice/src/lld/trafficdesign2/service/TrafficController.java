@@ -24,7 +24,7 @@ public class TrafficController {
 
         TrafficPhase phase = scheduler.selectNextPhase(intersection);
 
-        System.out.println("\nActive Phase:");
+        System.out.println("\nActive Phase:" + phase);
 
         for (Movement m : phase.getAllowedMovements()) {
             System.out.println("GREEN : " + m);

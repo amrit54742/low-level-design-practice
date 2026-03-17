@@ -24,6 +24,8 @@ public class Main {
         l1.vehicleArrived();
         l1.vehicleArrived();
         l3.vehicleArrived();
+        l3.vehicleArrived();
+        l3.vehicleArrived();
 
         TrafficPhase p1 = new TrafficPhase(Set.of(ns, sn), 5);
         TrafficPhase p2 = new TrafficPhase(Set.of(ew, we), 5);

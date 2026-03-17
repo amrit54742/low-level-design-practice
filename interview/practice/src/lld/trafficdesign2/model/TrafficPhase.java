@@ -1,7 +1,10 @@
 package lld.trafficdesign2.model;
 
+import lombok.ToString;
+
 import java.util.Set;
 
+@ToString
 public class TrafficPhase {
 
     private Set<Movement> allowedMovements;
