@@ -1,0 +1,7 @@
+package lld.taskmanagement.model;
+
+public enum Priority {
+    LOW,
+    MEDIUM,
+    HIGH
+}

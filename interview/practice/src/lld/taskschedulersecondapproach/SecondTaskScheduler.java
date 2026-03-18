@@ -62,6 +62,7 @@ public class SecondTaskScheduler {
                         taskQueue.poll();
                     }
                     System.out.println("Executing: " + task.getTaskId());
+                    System.out.println("new thread");
 
                     task.getExecutor().run();
 
@@ -75,5 +76,6 @@ public class SecondTaskScheduler {
 
         schedulerThread.setDaemon(true);
         schedulerThread.start();
+        System.out.println("main thread");
     }
 }
