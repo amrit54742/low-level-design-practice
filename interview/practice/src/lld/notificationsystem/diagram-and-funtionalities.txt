@@ -1,0 +1,44 @@
+Plug & Play Model
+Extensible: SMS, Email, Pop-up
+Notification ↑ dynamically-- this implies we are gonna use decorator
+Store all notifications / logging
+
+
+diagram:
+
+Notification System
+│
+├── Notification (Decorator Pattern)
+│   ├── INotification
+│   ├── SimpleNotification
+│   ├── INotificationDecorator (abstract)
+│   ├── TimestampDecorator
+│   └── SignatureDecorator
+│
+├── Observer Pattern
+│   ├── IObserver
+│   ├── IObservable
+│   └── NotificationObservable
+│
+├── Service Layer (Singleton)
+│   └── NotificationService
+│
+├── Strategy Pattern
+│   ├── INotificationStrategy
+│   ├── EmailStrategy
+│   ├── SMSStrategy
+│   └── PopUpStrategy
+│
+├── Observers (Concrete)
+│   ├── Logger
+│   └── NotificationEngine
+│
+└── Main Driver
+    └── NotificationSystemUpdated
+
+
+points:
+//todo: below line is redundant. it is just keeping the history of all the events that were sent to the observers.
+    // It is useful in production systems, but not here!
+    private List<INotification> notifications = new ArrayList<>();
+
