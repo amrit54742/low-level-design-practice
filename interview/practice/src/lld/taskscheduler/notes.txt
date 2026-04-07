@@ -1,0 +1,72 @@
+Scheduler Thread:
+   synchronized(this)
+   queue empty
+   wait()  ← releases lock
+
+------------------------------------
+
+Main Thread:
+   scheduleTask()
+   synchronized(this) ← acquires lock
+   add task
+   notify()
+   exits → releases lock
+
+------------------------------------
+
+Scheduler Thread:
+   wakes up
+   re-acquires lock
+   continues execution
+
+
+
+Visual Representation
+TaskScheduler Object
+        |
+      LOCK
+        |
+---------------------------------
+| Scheduler Thread              |
+| acquires lock                |
+| wait() → releases lock       |
+---------------------------------
+                ↓
+---------------------------------
+| Main Thread                  |
+| acquires lock               |
+| adds task                   |
+| notify()                    |
+| releases lock               |
+---------------------------------
+                ↓
+---------------------------------
+| Scheduler Thread resumes     |
+---------------------------------
+
+
+
+
+Flow Summary (Perfect Understanding)
+Step 1:
+Scheduler thread enters synchronized(this)
+→ acquires lock
+
+Step 2:
+Queue empty → wait()
+→ releases lock
+→ goes to WAITING
+
+Step 3:
+Main thread calls scheduleTask()
+→ acquires lock
+→ adds task
+→ notify()
+
+Step 4:
+Main thread exits → releases lock
+
+Step 5:
+Scheduler wakes up
+→ re-acquires lock
+→ continues execution

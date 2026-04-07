@@ -10,20 +10,21 @@ public class SecondMain {
 
         SecondTask task1 = new SecondTask(
                 "Task1",
-                System.currentTimeMillis() + 3000,
+                System.currentTimeMillis() + 5000,
                 new SecondTaskExecutorAdd(10, 5)
         );
 
         SecondTask task2 = new SecondTask(
                 "Task2",
-                System.currentTimeMillis() + 1000,
+                System.currentTimeMillis() + 4000,
                 new SecondTaskExecutorSub(10, 5)
         );
 
 
         scheduler.scheduleTask(task1);
+        Thread.sleep(2000);
         scheduler.scheduleTask(task2);
 
-        Thread.sleep(5000);
+        Thread.sleep(10000);
     }
     }

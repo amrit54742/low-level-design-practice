@@ -22,6 +22,8 @@ public class Main {
         scheduler.scheduleTask(task2);
 
         Thread.sleep(5000);
+        //todo: wait() = release lock + sleep
+        //sleep() = NO lock release
 
     }
 }
