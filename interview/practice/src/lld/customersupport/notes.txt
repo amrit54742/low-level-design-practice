@@ -1,0 +1,14 @@
+1. we see this line at the end of output on terminal:(Agent thread of id: A1 is interrupted
+                                                   Agent thread of id: A2 is interrupted )
+-> This is happening because of:
+   service.shutdown();
+
+   WHAT interrupt() DOES
+   If a thread is blocked on:
+   ticketsQueue.take();
+
+   👉 interrupt() will:
+   Wake up the thread
+   Throw InterruptedException
+
+2.
