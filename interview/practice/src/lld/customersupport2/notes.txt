@@ -1,0 +1,31 @@
+🔷 1. FINAL ARCHITECTURE
+Customer → TicketQueue → Scheduler Thread → LeastLoadedStrategy → Agent → process()
+Key idea:
+Scheduler decides assignment
+Agents just execute
+No random picking anymore
+🔷 2. PACKAGE STRUCTURE
+com.support.system
+│
+├── model
+│   ├── Ticket
+│   └── TicketStatus
+│
+├── worker
+│   └── Agent
+│
+├── strategy
+│   ├── AssignmentStrategy
+│   └── LeastLoadedStrategy
+│
+├── queue
+│   └── TicketQueue
+│
+├── scheduler
+│   └── Scheduler
+│
+├── service
+│   └── SupportService
+│
+└── main
+    └── Main
