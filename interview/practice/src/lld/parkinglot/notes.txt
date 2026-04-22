@@ -1,0 +1,11 @@
+🚗 ENTRY FLOW
+1. Vehicle arrives
+2. EntryGate requests ParkingLot
+3. ParkingLot uses Strategy to find spot
+4. Spot assigned
+5. Ticket generated
+🚗 EXIT FLOW
+1. Ticket scanned
+2. ExitGate calculates duration
+3. Payment calculated
+4. Spot freed
